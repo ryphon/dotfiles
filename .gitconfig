@@ -1,0 +1,9 @@
+[user]
+	email = dylanshepard@me.com
+	name = ryphon
+[push]
+	default = simple
+[alias]
+	co = checkout
+[core]
+	editor = gvim -f

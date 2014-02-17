@@ -1,0 +1,7 @@
+Script for ibus started at run_im.
+Script for auto started at run_im.
+Script for default started at run_im.
+init: gnome-settings-daemon main process ended, respawning
+init: unity-panel-service main process (1688) terminated with status 1
+init: gnome-session main process (1686) terminated with status 1
+init: gnome-settings-daemon main process (791) terminated with status 1
