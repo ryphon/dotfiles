@@ -1,3 +1,0 @@
-[State]
-timestamp=1389661692
-migrated=00_remove_unityshell_in_gnome_session.py;03_migrate_profile_independent.py;03_migrate_signon;01_unity_change_dconf_path;02_migrate_to_gsettings.py;install-default-webapps-in-launcher.py;nautilus-unity-launcher-icon.py;

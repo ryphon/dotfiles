@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/home/dx/github/gmod/gmod-docker/ttt'
+let g:netrw_dirhist_3='/home/dx/github/qmk_firmware/keyboards/kyria/keymaps/ryphon'
+let g:netrw_dirhist_2='/home/dx/github/soldat/dockerfile'
+let g:netrw_dirhist_1='/home/dx/projects/qmk_firmware/keyboards/rgbkb/sol/keymaps/ryphon_v2'

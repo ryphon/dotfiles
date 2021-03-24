@@ -1,70 +1,71 @@
-# Path to your oh-my-zsh configuration.
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+# Path to your oh-my-zsh installation.
 ZSH=$HOME/.oh-my-zsh
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
-
-# Example aliases
-# alias zshconfig="gvim ~/.zshrc"
-# alias ohmyzsh="gvim ~/.oh-my-zsh"
-
-# Set to this to use case-sensitive completion
-# CASE_SENSITIVE="true"
-
-# Uncomment this to disable bi-weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment to change how often before auto-updates occur? (in days)
-# export UPDATE_ZSH_DAYS=13
-
-# Uncomment following line if you want to disable colors in ls
-# DISABLE_LS_COLORS="true"
-
-# Uncomment following line if you want to disable autosetting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment following line if you want to disable command autocorrection
-# DISABLE_CORRECTION="true"
-
-# Uncomment following line if you want red dots to be displayed while waiting for completion
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment following line if you want to disable marking untracked files under
-# VCS as dirty. This makes repository status check for large repositories much,
-# much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment following line if you want to  shown in the command execution time stamp 
-# in the history command output. The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|
-# yyyy-mm-dd
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(rails ruby gem heroku rvm bundler battery)
+ZSH_THEME="ryphon"
 
 source $ZSH/oh-my-zsh.sh
-source $ZSH/custom/zsh-git-prompt/zshrc.sh
+
+COMPLETION_WAITING_DOTS="true"
+
+autoload zmv
 
 # User configuration
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/dx/.local/bin:/home/dx/.cargo/bin"
 
-export PATH="/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/dylan/.rvm/bin:/home/dylan/.rvm/bin"
-# export MANPATH="/usr/local/man:$MANPATH"
+# Added by serverless binary installer
+export PATH="$HOME/.serverless/bin:$PATH"
+export PATH="$HOME/.nodenv/bin:$PATH"
+export PATH="$HOME/.nodenv/versions/14.4.0/bin:$PATH"
+export PATH="$HOME/.tfenv/bin:$PATH"
+export PATH="$HOME/.tgenv/bin:$PATH"
 
-# # Preferred editor for local and remote sessions
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+# ng
+export PATH="/snap/bin:$PATH"
+#perl 
+export PERL_LOCAL_LIB_ROOT="$PERL_LOCAL_LIB_ROOT:/root/perl5";
+export PERL_MB_OPT="--install_base /root/perl5";
+export PERL_MM_OPT="INSTALL_BASE=/root/perl5";
+export PERL5LIB="/root/perl5/lib/perl5:$PERL5LIB";
+export PATH="/root/perl5/bin:$PATH";
 
-# ssh
-export SSH_KEY_PATH="~/.ssh/dsa_id"
+alias max-files='du -a ./ | sort -n -r | head -n 20'
+
+#gpg
+export GPG_TTY=$(tty)
+export GPGKEY=13556A2925E8BBD2
+
+eval "$(nodenv init -)"
+
+#maven
+export M2_HOME=/dg/local/cots/maven/default
+[[ ":${PATH}:" != *":/dg/local/cots/maven/default/bin:"* ]] && PATH="/dg/local/cots/maven/default/bin:${PATH}"
 
 autoload -U colors && colors
+source $ZSH/custom/git-prompt/git-prompt.zsh
+source $ZSH/custom/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-PROMPT='%{$fg[cyan]%}%B%m%b%{$reset_color%}$(git_super_status) %B%{$fg[green]%}%~%b > '
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# TF 
+export PATH="$HOME/.tfenv/bin:$PATH"
+export PATH="$HOME/.tgenv/bin:$PATH"
+# >>> conda initialize >>>
+__conda_setup="$('/home/dx/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/dx/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/dx/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/dx/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+printf "\e[?2004l"
+
+
