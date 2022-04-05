@@ -1,6 +1,12 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =4
+let g:netrw_dirhistcnt =2
+let g:netrw_dirhist_2='/home/dx/k8s/traefik/traefik'
+let g:netrw_dirhist_1='/home/dx/github/gmod-react/src/Views/Game/Dashboard'
+let g:netrw_dirhist_0='/home/dx/github/gmod-react/src/Views/Game'
+let g:netrw_dirhist_9='/home/dx/github/gmod-react/src/Views'
+let g:netrw_dirhist_8='/home/dx/github/gmod-react/src/components/AppBar'
+let g:netrw_dirhist_7='/home/dx/github/gmod-react/src/components'
+let g:netrw_dirhist_6='/home/dx/github/gmod-react/src/components/Drawer'
+let g:netrw_dirhist_5='/home/dx/github/dotfiles/.git'
 let g:netrw_dirhist_4='/home/dx/github/gmod/gmod-docker/ttt'
 let g:netrw_dirhist_3='/home/dx/github/qmk_firmware/keyboards/kyria/keymaps/ryphon'
-let g:netrw_dirhist_2='/home/dx/github/soldat/dockerfile'
-let g:netrw_dirhist_1='/home/dx/projects/qmk_firmware/keyboards/rgbkb/sol/keymaps/ryphon_v2'
